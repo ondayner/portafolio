@@ -1,0 +1,240 @@
+@media only screen and (max-width: 1024px) and (min-width: 200px) { 
+    .logo {
+        margin-left: 20px;
+        font-size: 14.5px;
+    }
+    
+    .l-nav-a {
+        display: block;
+        z-index: 10;
+    }
+    
+    .ul {
+        position: fixed;
+        top: 0;
+        right: 100%;
+        margin: 0;
+        z-index: 90;
+        height: 100vh;
+        width: 60%;
+        background-color: rgb(9, 23, 43);
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+
+    .salir {
+        display: block;
+        position: absolute;
+        top: 4%;
+        font-size: 20px;
+        left: 5%;
+        transform: scaleX(1.15);
+    }
+
+    .a {
+        font-weight: 400;
+    }
+
+    .card-skills {
+        display: flex;
+        justify-content: center;
+        width:  100%;
+        height: 1fr;
+        text-align: center;
+        background-color: #48e;
+        margin-top: 60px;
+        position: relative;
+        overflow: hidden;
+    }
+    .icon-skill {
+        transform: scale(.7) translateY(-45px);
+    }
+    .card-skills:hover .icon-skill {
+        animation: none;
+    }
+
+    .card-skills {
+        overflow: visible;
+    }
+    .card-skills:hover {
+        animation: none;
+    }
+    .card-skills:hover .flex-card {
+        animation: none;
+    }
+
+    .flex-card {
+        top: 60px;
+        font-size: 10px;
+    }
+
+    .proyects-title {
+        font-size: 22px;
+    }
+
+    .about-title {
+        font-size: 22px;
+    }
+
+    .icon-skill {
+        width: 30px;
+    }
+}
+@media only screen and (max-width: 1024px) and (min-width: 748px) { 
+    .nombre {
+        font-size: 40px;
+        text-align: center;
+        user-select: none;
+        transition: .3s;
+    }
+    .nombre span {
+        font-size: 25px;
+    }
+
+    .title-skill {
+        font-size: 14px;
+    }
+    
+    .text-skills {
+        font-size: 10.5px;
+    }
+}
+@media only screen and (max-width: 748px) and (min-width: 500px) { 
+    .salir {
+        display: block;
+        position: absolute;
+        top: 4%;
+        font-size: 20px;
+        left: 10%;
+        transform: scaleX(1.15);
+    }
+
+    .nombre {
+        font-size: 35px;
+
+    }
+    .nombre span {
+        font-size: 20px;
+    }
+
+    .cart-about {
+        width: 60%;
+        max-width: 100%;
+        font-size: 13.5px;
+        text-align: center;
+
+    }
+
+    .flex-e {
+        grid-template-columns: repeat(1, 60%);
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+
+    .text-skills {
+        font-size: 12px;
+    }
+
+    .grid-proyects {
+        display: grid;
+        grid-template-columns: repeat(1, 60%);
+        justify-content: center;
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .title-proyect-item {
+        margin-top: 21px;
+        margin-bottom: 30px;
+    }
+}
+@media only screen and (max-width: 500px) and (min-width: 200px) { 
+    .ul {
+        position: fixed;
+        top: 0;
+        right: 100%;
+        margin: 0;
+        z-index: 90;
+        height: 100vh;
+        width: 60%;
+        background-color: rgb(9, 23, 43);
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
+        gap: 55px;
+    }
+
+    .cont-redes {
+        display: none;
+    }
+
+    .salir {
+        display: block;
+        position: absolute;
+        top: 4%;
+        font-size: 20px;
+        left: 13%;
+        transform: scaleX(1.15);
+    }
+
+    .nombre {
+        font-size: 20px;
+
+    }
+    .nombre span {
+        font-size: 10px;
+    }
+    
+    .title-skill {
+        font-size: 11px;
+    }
+    
+    .text-skills {
+        font-size: 7px;
+    }
+
+    .cart-about {
+        width: 75%;
+        max-width: 100%;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .about-title {
+        font-size: 20px;
+    }
+
+    .flex-e {
+        grid-template-columns: repeat(1, 70%);
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+
+    .text-skills {
+        font-size: 11px;
+    }
+
+    .proyects-title {
+        font-size: 20px;
+        margin-top: 30px;
+    }
+
+    .grid-proyects {
+        display: grid;
+        grid-template-columns: repeat(1, 70%);
+        justify-content: center;
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .title-proyect-item {
+        margin-top: 21px;
+        margin-bottom: 30px;
+        font-size: 15px;
+    }
+
+    .icon-link {
+        font-size: 18px;
+    }
+}

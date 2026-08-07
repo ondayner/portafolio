@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+@import "tailwindcss";
+
+@theme {
+  /* Mapeo de colores personalizados usados en tu proyecto */
+  --color-brand-bg: #0B1120;
+  --color-brand-detalles: #48e;
+  --color-brand-hover: #3b76d6;
+  
+  /* Gradientes o extensiones opcionales */
+  --color-[#48e]: #48e;
+}
+
+
+
+
+
+/* Base global */
+body {
+  background-color: var(--color-brand-bg);
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+}
+
+/* =========================================================
+   OPTIMIZACIONES PARA TELÉFONOS (MOBILE PERFORMANCE)
+   ========================================================= */
+
+/* Para pantallas móviles (menos de 768px):
+   1. Se desactivan/suavizan las sobreanimaciones para evitar lag.
+   2. Transiciones simplificadas para GPU en móviles de gama media/baja.
+*/
+@media (max-width: 767px) {
+  /* Quita animación escalonada (staggered delay animations) en paneles de tarjetas */
+  .animate-step {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* Quita efectos de blur pesados en móvil si congelan el scroll */
+  .backdrop-blur-2xl, .backdrop-blur-xl {
+    backdrop-filter: blur(8px) !important;
+  }
+
+  /* Desactiva los efectos hover en móvil para evitar 'sticky hover' al tocar */
+  .group:hover .group-hover\:scale-105,
+  .hover\:-translate-y-1:hover {
+    transform: none !important;
+  }
+}
+
+
+
+
+
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+section, 
+[id] {
+  scroll-margin-top: 80px;
+}
+
+#centrar {
+  width: 100%;
+  max-width: 80rem;
+}
+
+@keyframes stepFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-step {
+  animation: stepFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0; 
+}
+
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+
+@keyframes girarReloj {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.manecilla-reloj {
+    animation: girarReloj 2s linear infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.4; filter: blur(20px); }
+  50% { opacity: 0.8; filter: blur(25px); }
+}
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(20px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.animate-float { animation: float 4s ease-in-out infinite; }
+.animate-glow { animation: pulse-glow 3s ease-in-out infinite; }
+.animate-slide-up { animation: slide-up 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+
+/* ESTILOS DE TRANSICIÓN PARA EL SCROLL REVEAL (ENTRADA Y SALIDA) */
+.reveal-element {
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.reveal-hidden-fade { opacity: 0; transform: translateY(40px); }
+.reveal-hidden-left { opacity: 0; transform: translateX(-50px); }
+.reveal-hidden-right { opacity: 0; transform: translateX(50px); }
+.reveal-hidden-scale { opacity: 0; transform: scale(0.88); }
+
+.reveal-visible { opacity: 1; transform: translate(0) scale(1); }
